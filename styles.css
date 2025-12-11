@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+}
+
+.nav {
+  background: white;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-btn {
+  margin: 0 5px;
+  padding: 7px 14px;
+  border: 0;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-btn.primary {
+  background: #e00000;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-img {
+  width: 300px;
+}
+
+.search-row select,
+.search-row input {
+  padding: 8px;
+  margin-right: 8px;
+}
+
+.primary {
+  background: #e00000;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.secondary {
+  background: #0077ff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.danger {
+  background: #cf0000;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+<div class="blood-drop"></div>
+<style>
+.blood-drop {
+  width: 60px;
+  height: 80px;
+  background: red;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: relative;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.blood-drop:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 18px;
+  width: 24px;
+  height: 24px;
+  background: red;
+  border-radius: 50%;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+</style>
+<div class="heartbeat"></div>
+
+<style>
+.heartbeat {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  animation: beat 0.7s infinite alternate;
+}
+
+@keyframes beat {
+  from { transform: scale(1); }
+  to { transform: scale(1.4); }
+}
+</style>
+<div class="loader"></div>
+
+<style>
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ffcccc;
+  border-top-color: red;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+</style>
+<div class="flow-line"></div>
+
+<style>
+.flow-line {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, red, darkred);
+  background-size: 200% 100%;
+  animation: flow 2s infinite linear;
+}
+
+@keyframes flow {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+</style>
